@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="{DynamicResource PageBackgroundColor}"
+             x:Class="SocketTechApp.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="250"/>
+
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <!--image/logo-->
+        <Image Source="st_white.png" Grid.Row="0" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Aspect="AspectFill" HeightRequest="200" WidthRequest="500"/>
+        <!--entry spot for username-->
+        <Entry x:Name="usernameEntry" Grid.Row="1" Placeholder="Username" Margin="20,10,20,0" VerticalOptions="Center" />
+        <!--entry spot for pw-->
+        <Entry x:Name="passwordEntry" Grid.Row="2" Placeholder="Password" IsPassword="True" Margin="20,10,20,0" VerticalOptions="Center" />
+        <!--submit button-->
+        <Button Grid.Row="3" Text="Submit" Clicked="OnSubmitClicked" Margin="20,20,20,0" VerticalOptions="Center" />
+    </Grid>
+</ContentPage>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="SocketTechApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SocketTechApp"
+    FlyoutHeaderBehavior="CollapseOnScroll">
+    
+    <ShellContent
+        Title="SocketTechSolutions"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" 
+        />
+
+    <!-- Top bar navigation -->
+    <FlyoutItem Title="PlugHub" Icon="icon.png">
+        <ShellContent Route="PlugHub" ContentTemplate="{DataTemplate local:PlugHub}" />
+        
+    </FlyoutItem>
+
+    <ShellContent Route="SettingsPage" Title="Settings" ContentTemplate="{DataTemplate local:SettingsPage}" />
+    <ShellContent Route="AboutPage" Title="About" ContentTemplate="{DataTemplate local:AboutPage}" />
+</Shell>
